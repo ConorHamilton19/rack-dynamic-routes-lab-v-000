@@ -8,7 +8,8 @@ class Application
 
     if req.path.match(/items/)
       item_name = req.path.split("/items/").last
-      item = @@items.
+      item = @@items.find{|i| i.name == item_name}
+      
       end
     resp.finish
   end
