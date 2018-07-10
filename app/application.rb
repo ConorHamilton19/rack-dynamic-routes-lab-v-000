@@ -1,5 +1,6 @@
 class Application
 
+@@items = []
 
   def call(env)
     resp = Rack::Response.new
@@ -7,7 +8,7 @@ class Application
 
     if req.path.match(/items/)
       item_name = req.path.split("/items/").last
-      item = 
+      item = @@items.
       end
     resp.finish
   end
